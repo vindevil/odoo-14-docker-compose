@@ -1,4 +1,5 @@
-# Installing Odoo 14 without binding to host by one command
+# Install Odoo 14 without binding to host
+# Network "proxy" should be created before
 
 (Supports multiple Odoo instances on one server)
 
@@ -12,8 +13,9 @@ $ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/mast
 $ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s 'odoo14-two' 'admin_password'
 ```
 
-The only one argument:
+The arguments:
 * **odoo14-one**: Odoo deploy folder
+* **admin_password**: Database management master password
 
 If `curl` is not found, install it:
 
