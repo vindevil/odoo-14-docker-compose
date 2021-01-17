@@ -3,8 +3,6 @@ services:
   db:
     image: postgres:13
     # postgres_version: 13
-    networks:
-      - proxy
     environment:
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
@@ -21,8 +19,6 @@ services:
       - db
     expose:
       - "8069"
-    networks:
-     - proxy
     tty: true
     command: -- --dev=reload
 #    command: odoo scaffold /mnt/extra-addons/custom_module
@@ -36,6 +32,8 @@ services:
       - ./config:/etc/odoo
     restart: always             # run as a service
 
-  networks:
-    proxy:
+networks:
+  default:
+    external:
+      name: proxy
 
