@@ -1,20 +1,19 @@
-# Installing Odoo 14 with one command
+# Installing Odoo 14 without binding to host by one command
 
 (Supports multiple Odoo instances on one server)
 
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-# 1st Odoo @ localhost:10014
-$ curl -s https://raw.githubusercontent.com/minhng92/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo-14-docker-compose-one 10014
+# 1st Odoo
+$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-one
 
-# 2nd Odoo @ localhost:11014
-$ curl -s https://raw.githubusercontent.com/minhng92/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo-14-docker-compose-two 11014
+# 2nd Odoo
+$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-two
 ```
 
-Some arguments:
-* First argument (**odoo-14-docker-compose-one**): Odoo deploy folder
-* Second argument (**10014**): Odoo port
+The only one argument:
+* **odoo14-one**: Odoo deploy folder
 
 If `curl` is not found, install it:
 
@@ -45,13 +44,6 @@ $ sudo sysctl -p    # apply new config immediately
 Start the container:
 ``` sh
 $ docker-compose up
-```
-
-* Then open `localhost:10014` to access Odoo 14.0. If you want to start the server with a different port, change **10014** to another value in **docker-compose.yml**:
-
-```
-ports:
- - "10014:8069"
 ```
 
 * Log file is printed @ **etc/odoo-server.log**
