@@ -1,5 +1,6 @@
 # Install Odoo 14 without binding to host
-# Network "proxy" should be created before
+
+*Network "proxy" should be created before*
 
 (Supports multiple Odoo instances on one server)
 
