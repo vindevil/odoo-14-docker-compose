@@ -4,5 +4,5 @@ docker-compose down
 rm -rf pgdata
 rm -rf web-data
 rm -rf addons
-rm -rf etc
+rm -rf config
 echo 'Odoo deleted completely!'
