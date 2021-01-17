@@ -6,10 +6,10 @@ Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https
 
 ``` bash
 # 1st Odoo
-$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-one
+$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-one admin_password
 
 # 2nd Odoo
-$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-two
+$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-two admin_password
 ```
 
 The only one argument:
@@ -30,8 +30,8 @@ Change the folder permission to make sure that the container is able to access t
 ``` sh
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
-$ mkdir -p postgresql
-$ sudo chmod -R 777 postgresql
+$ mkdir -p pgdata
+$ sudo chmod -R 777 pgdata
 ```
 
 Increase maximum number of files watching from 8192 (default) to **524288**. In order to avoid error when we run multiple Odoo instances. This is an *optional step*:
