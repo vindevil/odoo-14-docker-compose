@@ -11,7 +11,6 @@ sed -i 's/vindevil/'$PASSWD'/g' $DESTINATION/config/odoo.conf  # Substitute 'vin
 mkdir -p $DESTINATION/pgdata
 mkdir -p $DESTINATION/web-data
 mkdir -p $DESTINATION/addons
-mkdir -p $DESTINATION/config
 # set permission
 sudo chmod -R 777 $DESTINATION
 # config
