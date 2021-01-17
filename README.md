@@ -6,10 +6,10 @@ Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https
 
 ``` bash
 # 1st Odoo
-$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-one admin_password
+$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s 'odoo14-one' 'admin_password'
 
 # 2nd Odoo
-$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo14-two admin_password
+$ curl -s https://raw.githubusercontent.com/vindevil/odoo-14-docker-compose/master/run.sh | sudo bash -s 'odoo14-two' 'admin_password'
 ```
 
 The only one argument:
